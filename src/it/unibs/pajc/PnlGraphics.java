@@ -29,7 +29,6 @@ public class PnlGraphics extends JPanel {
 		//g.drawLine(0, 0, w, h);
 		
 		g.setColor(Color.black);
-		g.fillRect(0, 0, w, h);
 		
 		for (int i = 1;i <= 7;i++) {
 			g.drawLine(0, hSection * i, w, hSection * i);
@@ -37,12 +36,11 @@ public class PnlGraphics extends JPanel {
 		}
 		
 		for (int i = 0; i <= 7; i++) {
-			for (int j = 0; i <= 7; j++) {
+			for (int j = 0; j <= 7; j++) {
 				if((i + j) % 2 == 0) {
 					g.fillRect(wSection * j, hSection * i, wSection, hSection);
 				}
 			}
 		}
-		
 	}
 }
